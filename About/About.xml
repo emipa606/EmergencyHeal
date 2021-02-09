@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Emergency Heal (He's not dead, Jim) (Continued)</name>
+  <packageId>Mlie.EmergencyHeal</packageId>
+  <author>tremeloe</author>
+  <url>https://github.com/emipa606/EmergencyHeal</url>
+  <supportedVersions>
+    <li>1.1</li>
+    <li>1.2</li>
+  </supportedVersions>
+  <modDependencies />
+  <loadAfter />
+  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+Update of tremeloes mod
+https://steamcommunity.com/sharedfiles/filedetails/?id=1297736286
+
+[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+
+[table]
+    [tr]
+        [td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+        [td][url=https://github.com/emipa606/EmergencyHeal][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.imgur.com/NOW7jU1.png[/img]
+Your friend is dying. What do you want? Medicine? NO, you want a MIRACLE!
+This mod add a miracle! A build that can be actived to improve temporally treatments.
+
+[h1]General[/h1]
+ • The "Medical NanoBots Popper" is a item that can be manually triggered by colonists.
+ • When actived, this improves the treatment of nearby beds (include sleeping spots).
+ • BE CAREFUL! It's have a very limited lifespan.
+ • There's a quest reward version of this item. Don't expire but has less buffs.
+
+[h1]Stats[/h1]
+ • Improves the immunity gain speed (400%)
+ • Improves the medical tend (75%)
+ • Surgeries always successful (100%)
+ • Expires in [b]6 hours[/b] after triggered
+
+[h1]Costs[/h1]
+ • 125 silver
+ • 5 component
+ • 2 glitterworld medicine
+ • 2000w (power)
+ • "Microelectronics Basics" researched
+
+[h1]Compatibilities[/h1]
+ • Compatible with other mods (include new beds) and existent saves.
+ • If you're using other mod that add facilities to beds, put Emergency Heal BELOW him.
+ • "[i]Notify_NewLink was called but...[/i]" appears rarely in debug log. Don't panic, it's not a error.
+
+[h1]Changelog[/h1]
+ • [b]Small changes[/b] 02/18
+[b]---[/b] [i]Performance improvements and little changes in graphics[/i]
+ • [b]Big changes[/b] 02/16
+[b]---[/b] [i]Better textures/effects and a quest reward version; Big nerf on buffs and increased cost[/i]
+[b]---[/b] [i]Now the facility link emerge from nanobots around the building (not from building)[/i]
+[b]---[/b] [i]Add a power requirement: 2000w to spawn nanobots[/i]
+[b]---[/b] [i]One bed can't receive buff of more than 1 popper at same time (except normal+reward)[/i]
+
+[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]
+</description>
+</ModMetaData>
+

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Emergency Heal (He's not dead, Jim)</name>
+  <author>tremeloe</author>
+  <targetVersion>0.18.1722</targetVersion>
+  <description>Your friend is dying. What do you want? Medicine? NO, you want a MIRACLE!
+This mod add a miracle! A build that can be actived to improve temporally treatments.
+
+General
+ • The "Medical NanoBots Popper" is a item that can be manually triggered by colonists.
+ • When actived, this improves the treatment of nearby beds (include sleeping spots).
+ • BE CAREFUL! It's have a very limited lifespan.
+ • There's a quest reward version of this item. Don't expire but has less buffs.
+
+Stats
+ • Improves the immunity gain speed (400%)
+ • Improves the medical tend (75%)
+ • Surgeries always successful (100%)
+ • Expires in 6 hours after triggered
+
+Costs
+ • 125 silver
+ • 5 component
+ • 2 glitterworld medicine
+ • 2000w (power)
+ • "Microelectronics Basics" researched
+
+Compatibilities
+ • Compatible with other mods (include new beds) and existent saves.
+ • If you're using other mod that add facilities to beds, put Emergency Heal BELOW him.
+ • "Notify_NewLink was called but..." appears rarely in debug log. Don't panic, it's not a error.
+ </description>
+</ModMetaData>
