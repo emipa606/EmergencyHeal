@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Special case for the sleeping spots -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="SleepingSpot" or defName="DoubleSleepingSpot"]/comps</xpath>
+    <value>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EH_NanoBots_InAirA</li>
+          <li>EH_NanoBots_InAirB</li>
+        </linkableFacilities>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="SleepingSpot" or defName="DoubleSleepingSpot"]</xpath>
+    <value>
+      <placeWorkers>
+        <li>PlaceWorker_ShowFacilitiesConnections</li>
+      </placeWorkers>
+    </value>
+  </Operation>
+  <!-- Add facility to all other things that can use the End Table -->
+  <Operation Class="PatchOperationInsert">
+    <xpath>/Defs/ThingDef/comps/li/linkableFacilities/li[text()="EndTable"]</xpath>
+    <value>
+      <li>EH_NanoBots_InAirA</li>
+      <li>EH_NanoBots_InAirB</li>
+    </value>
+  </Operation>
+</Patch>

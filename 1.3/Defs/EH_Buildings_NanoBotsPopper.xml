@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Build base-->
+  <ThingDef Name="EH_NanoBotsBase" ParentName="FurnitureBase" Abstract="True">
+    <description>When triggered by hand, this pops invisible medical nano bots in the room to improve the treatment on beds.\n\n\n\n\nMedical tend quality offset: +75%\nImmunity gain speed factor: +400%\nSurgery sucess chance factor: +100%\nExpires in 6 hours after triggered</description>
+    <graphicData>
+      <texPath>EH_NanoBotsPopper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.25, 0.5, 0.25)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <WorkToBuild>1500</WorkToBuild>
+      <Flammability>0.18</Flammability>
+      <MarketValue>210</MarketValue>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Beauty>-4</Beauty>
+      <Mass>10</Mass>
+    </statBases>
+    <costList>
+      <Silver>125</Silver>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <MedicineUltratech>2</MedicineUltratech>
+    </costList>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <fillPercent>0</fillPercent>
+    <resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <specialDisplayRadius>9.9</specialDisplayRadius>
+    <pathCost>25</pathCost>
+    <rotatable>false</rotatable>
+    <techLevel>Industrial</techLevel>
+    <researchPrerequisites>
+      <li>MicroelectronicsBasics</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <comps>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+    </comps>
+    <designationCategory>Misc</designationCategory>
+    <filthLeaving Inherit="false" />
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+  </ThingDef>
+  <!--Principal build-->
+  <ThingDef ParentName="EH_NanoBotsBase">
+    <defName>EH_NanoBots</defName>
+    <label>medical nanobots</label>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>0.9</explosiveRadius>
+        <explosiveDamageType>EH_NanoBotsExplosion</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>1</chanceNeverExplodeFromDamage>
+        <postExplosionSpawnThingDef>EH_NanoBots_Active</postExplosionSpawnThingDef>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <startWickHitPointsPercent>-1</startWickHitPointsPercent>
+        <explosionSound>EH_NanoBotsExplosionSound</explosionSound>
+        <explosionEffect>EH_NanoBotsExplosion</explosionEffect>
+        <wickTicks>-1</wickTicks>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>EH_TriggerEmergencyHeal</useJob>
+        <useLabel>Trigger medical nano bots</useLabel>
+        <useDuration>55</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_StartWick</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+  <!--Active principal build-->
+  <ThingDef ParentName="EH_NanoBotsBase">
+    <defName>EH_NanoBots_Active</defName>
+    <label>medical nanobots (active)</label>
+    <building>
+      <claimable>false</claimable>
+      <deconstructible>false</deconstructible>
+    </building>
+    <useHitPoints>False</useHitPoints>
+    <tradeability>None</tradeability>
+    <statBases>
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Spawner">
+        <requiresPower>true</requiresPower>
+        <spawnIntervalRange>-1</spawnIntervalRange>
+        <thingToSpawn>EH_NanoBots_InAirA</thingToSpawn>
+        <spawnMaxAdjacent>8</spawnMaxAdjacent>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2000</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>15000</lifespanTicks>
+        <!-- 1 day = 60.000 ticks !-->
+      </li>
+    </comps>
+    <designationCategory Inherit="false" />
+  </ThingDef>
+  <!--Reward version-->
+  <ThingDef ParentName="EH_NanoBotsBase">
+    <defName>EH_InfiniteNanoBots</defName>
+    <description>When triggered by hand, this pops invisible medical nano bots in the room to improve the treatment on beds.\n\n\n\n\nMedical tend quality offset: +40%\nImmunity gain speed factor: +250%\nSurgery sucess chance factor: +100%\nDon't expire</description>
+    <label>infinite medical nanobots</label>
+    <tradeability>Sellable</tradeability>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>EH_NanoBotsPopper</texPath>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Spawner">
+        <requiresPower>true</requiresPower>
+        <spawnIntervalRange>-1</spawnIntervalRange>
+        <thingToSpawn>EH_NanoBots_InAirB</thingToSpawn>
+        <spawnMaxAdjacent>8</spawnMaxAdjacent>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2000</basePowerConsumption>
+      </li>
+    </comps>
+    <specialDisplayRadius>9.9</specialDisplayRadius>
+    <resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+  </ThingDef>
+  <!--NanoBots!-->
+  <ThingDef Name="EH_NanoBotsInAirBase" ParentName="BuildingBase" Abstract="True">
+    <label>medical nanobots</label>
+    <description>Infinite nanobots in air.</description>
+    <thingClass>Building</thingClass>
+    <tradeability>None</tradeability>
+    <passability>Standable</passability>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <tickerType>Normal</tickerType>
+    <selectable>false</selectable>
+    <graphicData>
+      <texPath>EH_NanoBotsInAir</texPath>
+      <shaderType>Transparent</shaderType>
+      <graphicClass>Graphic_Flicker</graphicClass>
+    </graphicData>
+    <building>
+      <isInert>true</isInert>
+      <isEdifice>false</isEdifice>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <filthLeaving Inherit="false" />
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <useHitPoints>false</useHitPoints>
+    <randomizeRotationOnSpawn>true</randomizeRotationOnSpawn>
+    <comps>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>1000</lifespanTicks>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="EH_NanoBotsInAirBase">
+    <defName>EH_NanoBots_InAirA</defName>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <MedicalTendQualityOffset>0.65</MedicalTendQualityOffset>
+          <ImmunityGainSpeedFactor>3</ImmunityGainSpeedFactor>
+          <SurgerySuccessChanceFactor>1.3</SurgerySuccessChanceFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+        <maxDistance>8.9</maxDistance>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="EH_NanoBotsInAirBase">
+    <defName>EH_NanoBots_InAirB</defName>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <MedicalTendQualityOffset>0.325</MedicalTendQualityOffset>
+          <ImmunityGainSpeedFactor>1.5</ImmunityGainSpeedFactor>
+          <SurgerySuccessChanceFactor>1.3</SurgerySuccessChanceFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+        <maxDistance>8.9</maxDistance>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>
