@@ -71,8 +71,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>EH_ElectricSparkWahWah</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>EH_ElectricSparkWahWah</clipPath>
           </li>
         </grains>
       </li>
