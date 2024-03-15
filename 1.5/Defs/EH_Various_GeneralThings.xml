@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Jobs!-->
+  <JobDef>
+    <defName>EH_TriggerEmergencyHeal</defName>
+    <driverClass>JobDriver_UseItem</driverClass>
+    <reportString>triggering nano bots</reportString>
+  </JobDef>
+  <!--Damage!-->
+  <DamageDef>
+    <defName>EH_NanoBotsExplosion</defName>
+    <label>nano bots explosion</label>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <externalViolence>false</externalViolence>
+    <defaultDamage>0</defaultDamage>
+    <explosionHeatEnergyPerCell>0</explosionHeatEnergyPerCell>
+  </DamageDef>
+  <!--Effect!-->
+  <EffecterDef>
+    <defName>EH_NanoBotsExplosion</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>EH_MoteExplosion_Flash</moteDef>
+        <scale>0.5</scale>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>EH_MoteExplosion_Principal</moteDef>
+        <scale>5</scale>
+      </li>
+    </children>
+  </EffecterDef>
+  <!--Mote!-->
+  <ThingDef ParentName="MoteBase">
+    <defName>EH_MoteExplosion_Flash</defName>
+    <graphicData>
+      <texPath>Things/Mote/ExplosionFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote>
+      <fadeInTime>0.01</fadeInTime>
+      <solidTime>7</solidTime>
+      <fadeOutTime>3</fadeOutTime>
+      <growthRate>3.7</growthRate>
+    </mote>
+  </ThingDef>
+  <ThingDef ParentName="MoteBase">
+    <defName>EH_MoteExplosion_Principal</defName>
+    <graphicData>
+      <texPath>Things/Mote/PowerBeam</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote>
+      <fadeInTime>0.05</fadeInTime>
+      <solidTime>0</solidTime>
+      <fadeOutTime>2.2</fadeOutTime>
+      <growthRate>3.7</growthRate>
+    </mote>
+  </ThingDef>
+  <!--Sound!-->
+  <SoundDef>
+    <defName>EH_NanoBotsExplosionSound</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>EH_ElectricSparkWahWah</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>
