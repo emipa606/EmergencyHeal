@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: nano bots explosion -->
+  <EH_NanoBotsExplosion.label>nano bots explosion</EH_NanoBotsExplosion.label>
+  <!-- EN: {0} has been killed. -->
+  <EH_NanoBotsExplosion.deathMessage>{0} has been killed.</EH_NanoBotsExplosion.deathMessage>
+</LanguageData>

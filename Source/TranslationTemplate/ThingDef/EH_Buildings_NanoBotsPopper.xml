@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: infinite medical nanobots -->
+  <EH_InfiniteNanoBots.label>infinite medical nanobots</EH_InfiniteNanoBots.label>
+  <!-- EN: When triggered by hand, this pops invisible medical nano bots in the room to improve the treatment on beds.\n\n\n\n\nMedical tend quality offset: +40%\nImmunity gain speed factor: +250%\nSurgery sucess chance factor: +100%\nDon't expire -->
+  <EH_InfiniteNanoBots.description>When triggered by hand, this pops invisible medical nano bots in the room to improve the treatment on beds.
+
+
+
+
+Medical tend quality offset: +40%
+Immunity gain speed factor: +250%
+Surgery sucess chance factor: +100%
+Don't expire</EH_InfiniteNanoBots.description>
+  <!-- EN: medical nanobots -->
+  <EH_NanoBots.label>medical nanobots</EH_NanoBots.label>
+  <!-- EN: When triggered by hand, this pops invisible medical nano bots in the room to improve the treatment on beds.\n\n\n\n\nMedical tend quality offset: +75%\nImmunity gain speed factor: +400%\nSurgery sucess chance factor: +100%\nExpires in 6 hours after triggered -->
+  <EH_NanoBots.description>When triggered by hand, this pops invisible medical nano bots in the room to improve the treatment on beds.
+
+
+
+
+Medical tend quality offset: +75%
+Immunity gain speed factor: +400%
+Surgery sucess chance factor: +100%
+Expires in 6 hours after triggered</EH_NanoBots.description>
+  <!-- EN: Trigger medical nano bots -->
+  <EH_NanoBots.comps.CompUsable.useLabel>Trigger medical nano bots</EH_NanoBots.comps.CompUsable.useLabel>
+  <!-- EN: medical nanobots (active) -->
+  <EH_NanoBots_Active.label>medical nanobots (active)</EH_NanoBots_Active.label>
+  <!-- EN: When triggered by hand, this pops invisible medical nano bots in the room to improve the treatment on beds.\n\n\n\n\nMedical tend quality offset: +75%\nImmunity gain speed factor: +400%\nSurgery sucess chance factor: +100%\nExpires in 6 hours after triggered -->
+  <EH_NanoBots_Active.description>When triggered by hand, this pops invisible medical nano bots in the room to improve the treatment on beds.
+
+
+
+
+Medical tend quality offset: +75%
+Immunity gain speed factor: +400%
+Surgery sucess chance factor: +100%
+Expires in 6 hours after triggered</EH_NanoBots_Active.description>
+  <!-- EN: medical nanobots -->
+  <EH_NanoBots_InAirA.label>medical nanobots</EH_NanoBots_InAirA.label>
+  <!-- EN: Infinite nanobots in air. -->
+  <EH_NanoBots_InAirA.description>Infinite nanobots in air.</EH_NanoBots_InAirA.description>
+  <!-- EN: medical nanobots -->
+  <EH_NanoBots_InAirB.label>medical nanobots</EH_NanoBots_InAirB.label>
+  <!-- EN: Infinite nanobots in air. -->
+  <EH_NanoBots_InAirB.description>Infinite nanobots in air.</EH_NanoBots_InAirB.description>
+</LanguageData>
